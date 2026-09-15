@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>For Lilly 💍</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:Georgia,"Times New Roman",serif;background:#09070d;color:#fff}
+#app{position:fixed;inset:0;overflow:hidden}.page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transform:scale(1.03);transition:.75s ease}
+.page.active{opacity:1;visibility:visible;transform:scale(1)}
+.page:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,6,16,.8),rgba(100,30,85,.38),rgba(5,5,10,.8)),var(--bg) center/cover}
+.page:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,#ff8dce2b,transparent 30%),radial-gradient(circle at 85% 75%,#a66fff2b,transparent 32%)}
+.card{position:relative;z-index:2;width:min(720px,94vw);max-height:90vh;overflow:auto;padding:clamp(24px,5vw,48px);border:1px solid #ffffff33;border-radius:30px;background:#110a1888;backdrop-filter:blur(14px);text-align:center;box-shadow:0 20px 80px #0008,0 0 70px #de5dbe1f}
+.eyebrow{font:700 11px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#f7c5ea;margin-bottom:14px}
+h1{font-size:clamp(40px,9vw,76px);line-height:1;margin:0 0 18px;font-weight:500}h2{font-size:clamp(32px,7vw,56px);line-height:1.05;margin:0 0 18px;font-weight:500}
+.lead{font-size:clamp(17px,3.6vw,22px);line-height:1.55;color:#f7edf8;max-width:620px;margin:15px auto}.small{font:14px/1.6 Arial;color:#e7d9e9}.signature{margin-top:22px;font-size:24px;font-style:italic;color:#ffd7f2}
+.progress{position:fixed;z-index:10;top:18px;left:20px;font:700 11px Arial;letter-spacing:.15em;color:#ffffffb8}
+.btn{border:1px solid #ffcdef66;color:#fff;background:linear-gradient(135deg,#ff6cc344,#975eff38);padding:14px 22px;border-radius:999px;font:700 14px Arial;cursor:pointer;margin-top:20px;transition:.2s}
+.btn:hover{transform:translateY(-2px)}.firsts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.memory{padding:18px 12px;border:1px solid #ffffff26;border-radius:20px;background:#ffffff0f}.memory .icon{font-size:28px;margin-bottom:8px}.memory h3{font-size:18px;font-weight:500;margin:0 0 7px}.memory p{font:13px/1.45 Arial;color:#e8dce9}
+.love-list{display:grid;gap:10px;max-width:520px;margin:20px auto}.love{padding:13px 16px;border-radius:18px;background:#ffffff10;border:1px solid #ffffff1c;font-size:17px}
+.hidden{max-height:0;opacity:0;overflow:hidden;transition:.6s}.hidden.show{max-height:160px;opacity:1}.letter{text-align:left}.letter p{font-size:17px;line-height:1.65;margin:12px 0;color:#f5eaf6}.final{font-size:clamp(20px,4vw,29px);line-height:1.5;max-width:580px;margin:22px auto}.one-more{font:14px Arial;color:#e8cbe2}
+@media(max-width:650px){.card{padding:25px 19px;border-radius:24px;max-height:88vh}.firsts{grid-template-columns:1fr}.memory{display:grid;grid-template-columns:42px 1fr;text-align:left;column-gap:10px;align-items:center}.memory .icon{grid-row:1/3}}
+</style></head><body><div id="app">
+
+<section class="page active" style="--bg:url('photos/lilly-1.jpg')"><div class="card"><div class="eyebrow">A little world made for you</div><h1>For Lilly 💍</h1><p class="lead">A tiny birthday surprise from someone who’s really happy you’re in his life.</p><div class="signature">from Bena ❤️</div><button class="btn" onclick="go(1)">Open it ❤️</button></div></section>
+
+<section class="page" style="--bg:url('photos/lilly-2.jpg')"><div class="card"><div class="eyebrow">Today is yours</div><h2>Happy Birthday, Lilly 🎂</h2><p class="small">Hidar 22, 2000 E.C.</p><p class="lead">Today isn't just another day. It's the day someone who would one day become so special to me came into this world.</p><p class="lead">So for a little while, forget everything else and just enjoy being my birthday girl. 🎀</p><button class="btn" onclick="go(2)">Come a little closer →</button></div></section>
+
+<section class="page" style="--bg:url('photos/lilly-1.jpg')"><div class="card"><div class="eyebrow">Us</div><h2>It started long before this.</h2><p class="lead">We've known each other since elementary school. But somehow, high school was when we started knowing each other in a different way.</p><p class="lead">And even though our time together hasn't been long, I don't want to measure what we have by a number.</p><p class="lead">I love the short time we've had. ❤️</p><button class="btn" onclick="go(3)">Let’s go back a little 🥹</button></div></section>
+
+<section class="page" style="--bg:url('photos/lilly-2.jpg')"><div class="card"><div class="eyebrow">Some moments stay</div><h2>Our firsts ❤️</h2><div class="firsts"><div class="memory"><div class="icon">💋</div><h3>The first kiss</h3><p>I don't think I'll ever forget that moment...</p></div><div class="memory"><div class="icon">🫂</div><h3>The first hug</h3><p>One of those moments I wish I could replay.</p></div><div class="memory"><div class="icon">🎬</div><h3>Our first cinema</h3><p>Just one day, but now it's part of our story.</p></div></div><button class="btn" onclick="go(4)">And that’s not all… 💗</button></div></section>
+
+<section class="page" style="--bg:url('photos/lilly-1.jpg')"><div class="card"><div class="eyebrow">The little things</div><h2>What I love about you</h2><div class="love-list"><div class="love">Your personality — just the way you are. 🥹</div><div class="love">The little moments that become big memories. ❤️</div><div class="love">The way you make being with you feel special.</div></div><p class="lead">And honestly… you’re not just girlfriend material.</p><p class="lead"><b>You’re wifey material. 💍</b></p><div id="wm" class="hidden"><p class="signature">Yeah... I said what I said. 😌❤️</p></div><button class="btn" onclick="document.getElementById('wm').classList.add('show')">Okay, maybe I should explain 👀</button><br><button class="btn" onclick="go(5)">There’s more I want to tell you… 💌</button></div></section>
+
+<section class="page" style="--bg:url('photos/lilly-2.jpg')"><div class="card letter"><div class="eyebrow">From my heart</div><h2>A letter for you</h2><p>Lilly,</p><p>Maybe we haven't been together for a very long time, but honestly, I don't measure what I feel for you by how long we've been together.</p><p>I love the short time we've had. I love the memories we've already made, and I love thinking about all the memories we haven't made yet.</p><p>I love your personality, the way you are, and the way you've become someone so special to me.</p><p>From knowing each other since elementary school to making these new memories together... I'm really happy that our paths crossed.</p><p>Thank you for being you. And on your birthday, I just want you to know that I'm grateful for every little moment with you.</p><p>Happy birthday, my Lilly. ❤️ I hope this new year of your life brings you happiness, peace, success, and everything your heart wishes for.</p><div class="signature">— Bena 💍</div><div style="text-align:center"><button class="btn" onclick="go(6)">One more thing, Lilly… 🥹</button></div></div></section>
+
+<section class="page" style="--bg:url('photos/lilly-1.jpg')"><div class="card"><div class="eyebrow">The last little surprise</div><h2>One last thing</h2><p class="final">Happy Birthday, my Lilly. ❤️</p><p class="one-more">More memories loading...</p><button class="btn" onclick="document.getElementById('fm').classList.add('show')">One more surprise ✨</button><div id="fm" class="hidden"><p class="final">If I could give you one thing today, I'd let you see yourself the way I see you. ❤️</p><p class="signature">Now come here, birthday girl. 🫂</p></div></div></section>
+
+</div><div class="progress" id="pg">01 / 07</div>
+<script>
+let n=0;const p=[...document.querySelectorAll('.page')];
+function go(i){if(i<0||i>6)return;p[n].classList.remove('active');n=i;p[n].classList.add('active');document.getElementById('pg').textContent=String(n+1).padStart(2,'0')+' / 07'}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'&&n<6)go(n+1);if(e.key==='ArrowLeft'&&n>0)go(n-1)})
+</script></body></html>
