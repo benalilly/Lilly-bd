@@ -1,50 +1,107 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>For Lilly 💍</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lilly's Little Universe 💗</title>
 <style>
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
-body{font-family:Georgia,"Times New Roman",serif;background:#09070d;color:#fff} body:after{content:"";position:fixed;inset:-20%;pointer-events:none;z-index:1;background:radial-gradient(circle at 20% 25%,#ff7acb18 0 2px,transparent 3px),radial-gradient(circle at 70% 65%,#e9b5ff20 0 2px,transparent 3px),radial-gradient(circle at 45% 80%,#fff4ff17 0 1px,transparent 3px);background-size:160px 180px,230px 210px,120px 140px;animation:stardrift 18s linear infinite;mix-blend-mode:screen}
-#app{position:fixed;inset:0;overflow:hidden}.page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transform:scale(1.03);transition:.75s ease}
-.page.active{opacity:1;visibility:visible;transform:scale(1)}
-.page.active:before{animation:cinematicZoom 18s ease-in-out infinite alternate}.page:after{animation:aurora 12s ease-in-out infinite alternate}.card{animation:cardFloat 7s ease-in-out infinite}.page:nth-child(even) .card{animation-delay:-2.5s}
-@keyframes cinematicZoom{from{background-position:center;background-size:100% 100%,cover}to{background-position:center;background-size:110% 110%,cover}}
-@keyframes aurora{0%{opacity:.45;transform:translate3d(-1%,1%,0) scale(1)}100%{opacity:1;transform:translate3d(1%,-1%,0) scale(1.05)}}
-@keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-@keyframes stardrift{from{background-position:0 0,0 0,0 0}to{background-position:160px -360px,-230px 210px,120px -280px}}
-#loveParticles{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:3}.float-heart{position:absolute;bottom:-12vh;color:#ffd3ed;text-shadow:0 0 14px #ff8bc8aa;opacity:0;animation:heartRise linear infinite;will-change:transform,opacity}@keyframes heartRise{0%{transform:translate3d(0,0,0) rotate(0deg) scale(.7);opacity:0}12%{opacity:.65}85%{opacity:.42}100%{transform:translate3d(var(--drift),-120vh,0) rotate(35deg) scale(1.25);opacity:0}}
-.page:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,6,16,.8),rgba(100,30,85,.38),rgba(5,5,10,.8)),var(--bg) center/cover}
-.page:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,#ff8dce2b,transparent 30%),radial-gradient(circle at 85% 75%,#a66fff2b,transparent 32%)}
-.card{position:relative;z-index:2;width:min(720px,94vw);max-height:90vh;overflow:auto;padding:clamp(24px,5vw,48px);border:1px solid #ffffff33;border-radius:30px;background:#110a1888;backdrop-filter:blur(14px);text-align:center;box-shadow:0 20px 80px #0008,0 0 70px #de5dbe1f}
-.eyebrow{font:700 11px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#f7c5ea;margin-bottom:14px}
-h1{font-size:clamp(40px,9vw,76px);line-height:1;margin:0 0 18px;font-weight:500}h2{font-size:clamp(32px,7vw,56px);line-height:1.05;margin:0 0 18px;font-weight:500}
-.lead{font-size:clamp(17px,3.6vw,22px);line-height:1.55;color:#f7edf8;max-width:620px;margin:15px auto}.small{font:14px/1.6 Arial;color:#e7d9e9}.signature{margin-top:22px;font-size:24px;font-style:italic;color:#ffd7f2}
-.progress{position:fixed;z-index:10;top:18px;left:20px;font:700 11px Arial;letter-spacing:.15em;color:#ffffffb8}
-.btn{border:1px solid #ffcdef66;color:#fff;background:linear-gradient(135deg,#ff6cc344,#975eff38);padding:14px 22px;border-radius:999px;font:700 14px Arial;cursor:pointer;margin-top:20px;transition:.2s}
-.btn:hover{transform:translateY(-2px)}.firsts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
-.memory{padding:18px 12px;border:1px solid #ffffff26;border-radius:20px;background:#ffffff0f}.memory .icon{font-size:28px;margin-bottom:8px}.memory h3{font-size:18px;font-weight:500;margin:0 0 7px}.memory p{font:13px/1.45 Arial;color:#e8dce9}
-.love-list{display:grid;gap:10px;max-width:520px;margin:20px auto}.love{padding:13px 16px;border-radius:18px;background:#ffffff10;border:1px solid #ffffff1c;font-size:17px}
-.hidden{max-height:0;opacity:0;overflow:hidden;transition:.6s}.hidden.show{max-height:160px;opacity:1}.letter{text-align:left}.letter p{font-size:17px;line-height:1.65;margin:12px 0;color:#f5eaf6}.final{font-size:clamp(20px,4vw,29px);line-height:1.5;max-width:580px;margin:22px auto}.one-more{font:14px Arial;color:#e8cbe2}
-@media(max-width:650px){.card{padding:25px 19px;border-radius:24px;max-height:88vh}.firsts{grid-template-columns:1fr}.memory{display:grid;grid-template-columns:42px 1fr;text-align:left;column-gap:10px;align-items:center}.memory .icon{grid-row:1/3}}
-</style></head><body><div id="loveParticles" aria-hidden="true"></div><div id="app">
-
-<section class="page active" style="--bg:url('photos/lilly-1.jpg')"><div class="card"><div class="eyebrow">A little world made for you</div><h1>For Lilly 💍</h1><p class="lead">A tiny birthday surprise from someone who’s really happy you’re in his life.</p><div class="signature">from Bena ❤️</div><button class="btn" onclick="go(1)">Open it ❤️</button></div></section>
-
-<section class="page" style="--bg:url('photos/lilly-2.jpg')"><div class="card"><div class="eyebrow">Today is yours</div><h2>Happy Birthday, Lilly 🎂</h2><p class="small">December 2, 2007</p><p class="lead">The world got a little more beautiful the day you arrived. And I got lucky enough to know you. 🎀</p><button class="btn" onclick="go(2)">Come a little closer →</button></div></section>
-
-<section class="page" style="--bg:url('photos/lilly-1.jpg')"><div class="card"><div class="eyebrow">Us</div><h2>It started long before this.</h2><p class="lead">From elementary school to the way we are now… somehow, life kept bringing us closer. I love every part of the time I’ve shared with you. ❤️</p><button class="btn" onclick="go(3)">Let’s go back a little 🥹</button></div></section>
-
-<section class="page" style="--bg:url('photos/lilly-2.jpg')"><div class="card"><div class="eyebrow">Some moments stay</div><h2>Our firsts ❤️</h2><div class="firsts"><div class="memory"><div class="icon">💋</div><h3>The first kiss</h3><p>A little moment that became part of my heart.</p></div><div class="memory"><div class="icon">🫂</div><h3>The first hug</h3><p>Every hug means something. The first one will always be special. ❤️</p></div><div class="memory"><div class="icon">🎬</div><h3>Our first movie date</h3><p>A movie, you beside me, and a memory I’ll keep close. ❤️</p></div></div><button class="btn" onclick="go(4)">And that’s not all… 💗</button></div></section>
-
-<section class="page" style="--bg:url('photos/lilly-1.jpg')"><div class="card"><div class="eyebrow">The little things</div><h2>What I love about you</h2><div class="love-list"><div class="love">You, exactly as you are. 🥹</div><div class="love">Our little moments. ❤️</div><div class="love">How being near you feels like home.</div></div><p class="lead">And honestly… you’re not just girlfriend material.</p><p class="lead"><b>You’re wifey material. 💍</b></p><div id="wm" class="hidden"><p class="signature">Yeah... I said what I said. 😌❤️</p></div><button class="btn" onclick="document.getElementById('wm').classList.add('show')">Okay, maybe I should explain 👀</button><br><button class="btn" onclick="go(5)">There’s more I want to tell you… 💌</button></div></section>
-
-<section class="page" style="--bg:url('photos/lilly-2.jpg')"><div class="card letter"><div class="eyebrow">From my heart</div><h2>A letter for you</h2><p>Lilly,</p><p>I love every part of the time I’ve shared with you — from the memories we already have to the ones waiting for us.</p><p>You’ve become so special to me, and I’m grateful life brought us closer.</p><p>I don’t want to lose you. I want us to build a life together, live together, and one day call you my wife. I want you to be the person I come home to, again and again. ❤️</p><p>Happy birthday, my love💖 I hope this new year of your life brings you happiness, peace, success, and everything your heart wishes for.</p><div class="signature">— Bena 💍</div><div style="text-align:center"><button class="btn" onclick="go(6)">One more thing, Lilly… 🥹</button></div></div></section>
-
-<section class="page" style="--bg:url('photos/lilly-1.jpg')"><div class="card"><div class="eyebrow">The last little surprise</div><h2>One last thing</h2><p class="final">If I could give you one thing today, it would be a chance to see yourself through my eyes. ❤️</p><p class="one-more">Because then you’d understand why you’re so special to me.</p><button class="btn" onclick="document.getElementById('fm').classList.add('show')">One more surprise ✨</button><div id="fm" class="hidden"><p class="final">i love u more than i can say u💘love is blind😁</p></div></div></section>
-
-</div><div class="progress" id="pg">01 / 07</div>
+:root{--pink:#ff9bd6;--purple:#b7a0ff;--glass:#160d24b8}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:Arial,sans-serif;background:#090611;color:#fff}
+#app{position:fixed;inset:0;overflow:hidden}
+.scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:18px 16px 94px;opacity:0;visibility:hidden;transform:translateY(12px) scale(.985);transition:opacity .5s ease,transform .6s ease,visibility .5s}
+.scene.active{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.scene:before{content:"";position:absolute;inset:-4%;background:linear-gradient(135deg,#080611c9,#3b123a75,#080611b8),var(--photo) center/cover;animation:slowzoom 22s ease-in-out infinite alternate}
+.scene:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 20%,#ff8dce35,transparent 32%),radial-gradient(circle at 85% 80%,#947aff32,transparent 35%);animation:glow 8s ease-in-out infinite alternate}
+@keyframes slowzoom{from{transform:scale(1)}to{transform:scale(1.12)}}
+@keyframes glow{from{opacity:.55}to{opacity:1}}
+#particles{position:fixed;inset:0;z-index:5;pointer-events:none;overflow:hidden}
+.particle{position:absolute;bottom:-10vh;color:#ffd4ef;text-shadow:0 0 15px #ff8bc8;animation:rise linear infinite;opacity:0}
+@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.7}90%{opacity:.35}100%{transform:translateY(-115vh) translateX(var(--drift)) rotate(45deg);opacity:0}}
+.panel{position:relative;z-index:2;width:min(590px,96vw);max-height:78vh;overflow:auto;text-align:center;padding:clamp(22px,5vw,38px) clamp(18px,4vw,32px);border:1px solid #ffffff38;border-radius:30px;background:linear-gradient(140deg,#160d24d9,#170d24a8);backdrop-filter:blur(15px);box-shadow:0 22px 90px #0008,0 0 55px #e36cc51b}
+.kicker{font-size:10px;letter-spacing:.28em;text-transform:uppercase;font-weight:800;color:#ffc6e9;margin-bottom:14px}
+h1,h2{font-family:Georgia,serif;font-weight:500;line-height:1.02;margin:0 0 15px}
+h1{font-size:clamp(42px,10vw,74px)}h2{font-size:clamp(34px,8vw,55px)}
+.sub{font-size:clamp(15px,3.8vw,19px);line-height:1.5;color:#f4e9f7;margin:12px auto;max-width:460px}
+.tiny{font-size:12px;color:#e6d2e9;line-height:1.5}
+.bigheart{font-size:clamp(62px,18vw,112px);line-height:1.2;display:block;filter:drop-shadow(0 0 22px #ff74c8);animation:heartBeat 2s ease-in-out infinite}
+@keyframes heartBeat{0%,100%{transform:scale(1)}12%{transform:scale(1.1)}24%{transform:scale(1)}36%{transform:scale(1.06)}}
+.action{border:1px solid #ffd0ee85;color:#fff;background:linear-gradient(120deg,#ff66b855,#a77aff55);padding:13px 19px;border-radius:999px;font-size:13px;font-weight:800;cursor:pointer;box-shadow:0 7px 28px #d94da522;transition:transform .2s,background .2s}
+.action:active{transform:scale(.96)}
+.action.primary{background:linear-gradient(110deg,#ff72c6,#9e7cff);border:0;color:#220c2a}
+.buttonrow{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px}
+.bottomnav{position:fixed;z-index:10;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:14px 18px calc(14px + env(safe-area-inset-bottom));background:linear-gradient(0deg,#080510ed,#08051000)}
+.navbtn{border:1px solid #ffffff3b;border-radius:999px;background:#170d24c9;color:#fff;padding:11px 16px;font-size:12px;font-weight:700;backdrop-filter:blur(10px)}
+.navbtn:disabled{opacity:.22}
+.pagecount{font-size:11px;letter-spacing:.15em;color:#fffbd0a8}
+.pills{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:20px 0}
+.pill{border:1px solid #ffffff30;border-radius:19px;background:#ffffff0d;padding:16px 7px;min-height:94px;color:white;cursor:pointer;font-size:12px;line-height:1.4;transition:.25s}
+.pill span{display:block;font-size:28px;margin-bottom:8px}
+.pill.selected{background:#ff8bce30;border-color:#ffb8e7;box-shadow:0 0 24px #ff75c633;transform:translateY(-3px)}
+.reveal{min-height:36px;color:#ffd8f0;font-family:Georgia,serif;font-size:19px;margin:12px 0}
+.choice{border:1px solid #ffffff2c;background:#ffffff0d;color:#fff;padding:14px;border-radius:17px;cursor:pointer;font-size:14px}
+.choice:active,.choice.active{background:#ff8bce35;border-color:#ffc1e7}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px auto;max-width:420px}
+.emojirow{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:22px 0}
+.bubble{width:75px;height:75px;border:1px solid #ffffff32;border-radius:24px;background:#ffffff10;color:white;font-size:32px;cursor:pointer;transition:.25s}
+.bubble.picked{transform:rotate(-7deg) scale(1.12);background:#ff86cf3d;box-shadow:0 0 28px #ff79c855}
+.finalmessage{font:clamp(19px,4.8vw,28px)/1.45 Georgia,serif;color:#ffe3f4;margin:18px auto}
+.progressline{position:fixed;z-index:11;top:0;left:0;right:0;height:3px;background:#ffffff18}
+.progressline span{display:block;height:100%;width:16.66%;background:linear-gradient(90deg,#ff78c8,#b49aff);transition:width .4s}
+@media(max-width:430px){.panel{max-height:76vh;padding:24px 17px}.pills{gap:6px}.pill{padding:13px 5px;min-height:88px}.choices{gap:8px}.choice{font-size:12px;padding:13px 8px}.scene{padding-bottom:88px}}
+</style>
+</head>
+<body>
+<div id="particles" aria-hidden="true"></div><div class="progressline"><span id="progress"></span></div>
+<div id="app">
+<section class="scene active" style="--photo:url('photos/lilly-1.jpg')">
+ <div class="panel"><div class="kicker">a tiny universe made for you</div><span class="bigheart">💗</span><h1>Hey, Lilly.</h1><p class="sub">Today, you’re not just opening a website…</p><p class="tiny">You’re opening a little piece of my heart. — Bena</p><div class="buttonrow"><button class="action primary" onclick="go(1)">Open your surprise ✨</button></div></div>
+</section>
+<section class="scene" style="--photo:url('photos/lilly-2.jpg')">
+ <div class="panel"><div class="kicker">main character day</div><div style="font-size:48px;animation:heartBeat 2s infinite">🎂🎀✨</div><h2>Happy Birthday,<br>Lilly!</h2><p class="sub">One day to celebrate the girl who makes my world feel different.</p><button class="action primary" onclick="burstConfetti(this)">Tap for birthday magic 🎉</button><div class="reveal" id="birthdayReveal"></div></div>
+</section>
+<section class="scene" style="--photo:url('photos/lilly-1.jpg')">
+ <div class="panel"><div class="kicker">our little timeline</div><h2>Pick a memory 💭</h2><p class="tiny">Tap one. I bet you remember it too.</p>
+ <div class="pills">
+  <button class="pill" onclick="memory(0,this)"><span>💋</span>First kiss</button>
+  <button class="pill" onclick="memory(1,this)"><span>🫂</span>First hug</button>
+  <button class="pill" onclick="memory(2,this)"><span>🎬</span>First movie</button>
+ </div><div class="reveal" id="memoryReveal">Choose one, pretty girl 💗</div></div>
+</section>
+<section class="scene" style="--photo:url('photos/lilly-2.jpg')">
+ <div class="panel"><div class="kicker">quick question, wifey</div><span class="bigheart">🥹</span><h2>What’s my favorite?</h2><p class="tiny">Choose carefully, ma’am 😌</p>
+ <div class="choices">
+  <button class="choice" onclick="answer(0,this)">Your smile 😊</button>
+  <button class="choice" onclick="answer(1,this)">Your hugs 🫂</button>
+  <button class="choice" onclick="answer(2,this)">Your whole self 💗</button>
+  <button class="choice" onclick="answer(3,this)">All of the above 🙄❤️</button>
+ </div><div class="reveal" id="answerReveal"></div></div>
+</section>
+<section class="scene" style="--photo:url('photos/lilly-1.jpg')">
+ <div class="panel"><div class="kicker">choose our little dream</div><h2>Us, someday… 💍</h2><p class="tiny">Tap the future you want to unlock.</p>
+ <div class="emojirow">
+  <button class="bubble" onclick="dream(0,this)" aria-label="home">🏡</button>
+  <button class="bubble" onclick="dream(1,this)" aria-label="travel">✈️</button>
+  <button class="bubble" onclick="dream(2,this)" aria-label="forever">💍</button>
+ </div><div class="reveal" id="dreamReveal">A home, adventures, or forever?</div></div>
+</section>
+<section class="scene" style="--photo:url('photos/lilly-2.jpg')">
+ <div class="panel"><div class="kicker">one last thing</div><span class="bigheart">💘</span><h2>Look at me, Lilly.</h2><p class="finalmessage">If you could see yourself through my eyes, you’d understand why I choose you. Every time.</p>
+ <button class="action primary" onclick="revealFinal()">Unlock my last words 🔐</button><div class="reveal" id="finalReveal"></div><p class="tiny" id="signature" style="display:none">— Bena, your person ❤️</p></div>
+</section>
+</div>
+<div class="bottomnav"><button id="back" class="navbtn" onclick="go(n-1)">← Back</button><span class="pagecount" id="count">01 / 06</span><button id="next" class="navbtn" onclick="go(n+1)">Next →</button></div>
 <script>
-let n=0;const p=[...document.querySelectorAll('.page')];
-function go(i){if(i<0||i>6)return;p[n].classList.remove('active');n=i;p[n].classList.add('active');document.getElementById('pg').textContent=String(n+1).padStart(2,'0')+' / 07'}
-document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'&&n<6)go(n+1);if(e.key==='ArrowLeft'&&n>0)go(n-1)});
-const particleLayer=document.getElementById('loveParticles');const hearts=['♡','♥','✦','❀'];for(let i=0;i<24;i++){const h=document.createElement('span');h.className='float-heart';h.textContent=hearts[i%hearts.length];h.style.left=(Math.random()*100)+'%';h.style.fontSize=(12+Math.random()*20)+'px';h.style.animationDuration=(11+Math.random()*15)+'s';h.style.animationDelay=(-Math.random()*24)+'s';h.style.setProperty('--drift',((Math.random()*140)-70)+'px');particleLayer.appendChild(h)}
-</script></body></html>
+let n=0;const scenes=[...document.querySelectorAll('.scene')];
+function go(i){if(i<0||i>=scenes.length)return;scenes[n].classList.remove('active');n=i;scenes[n].classList.add('active');document.getElementById('count').textContent=String(n+1).padStart(2,'0')+' / 06';document.getElementById('progress').style.width=((n+1)/scenes.length*100)+'%';document.getElementById('back').disabled=n===0;document.getElementById('next').disabled=n===scenes.length-1;document.getElementById('next').textContent=n===scenes.length-1?'The end 💗':(n===0?'Start →':'Keep going →')}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(n+1);if(e.key==='ArrowLeft')go(n-1)});
+function memory(i,b){document.querySelectorAll('.pill').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');const t=['That little moment became one of my favorite memories. 💋','I’ve had so many hugs from you, but the first one will always be special. 🫂','The movie was nice… but having you beside me was my favorite part. 🎬'];document.getElementById('memoryReveal').textContent=t[i]}
+function answer(i,b){document.querySelectorAll('.choice').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('answerReveal').textContent=i===3?'Correct answer 😌❤️ You really do know me.': 'Nice try 😂… it’s ALL of the above. ❤️'}
+function dream(i,b){document.querySelectorAll('.bubble').forEach(x=>x.classList.remove('picked'));b.classList.add('picked');const t=['A home where we feel safe, laugh a lot, and come back to each other. 🏡','Little trips, new places, and you sitting beside me every time. ✈️','You as my wife. Not just a dream—I want to build that life with you. 💍'];document.getElementById('dreamReveal').textContent=t[i]}
+function burstConfetti(){document.getElementById('birthdayReveal').textContent='✨ Make a wish, birthday girl. I’m wishing for a thousand more memories with you. ✨';for(let i=0;i<24;i++){const e=document.createElement('span');e.textContent=['💗','✨','🎉','💕'][i%4];e.style.cssText=`position:fixed;z-index:20;left:${Math.random()*100}%;top:${20+Math.random()*60}%;font-size:${16+Math.random()*20}px;pointer-events:none;transition:transform 1.5s ease,opacity 1.5s ease`;document.body.appendChild(e);requestAnimationFrame(()=>{e.style.transform=`translate(${(Math.random()-.5)*180}px,${-100-Math.random()*240}px) rotate(${Math.random()*180}deg)`;e.style.opacity='0'});setTimeout(()=>e.remove(),1700)}}
+function revealFinal(){document.getElementById('finalReveal').textContent='i love u more than i can say u💘love is blind😁';document.getElementById('signature').style.display='block'}
+const layer=document.getElementById('particles'),icons=['♡','♥','✦','✧','❀'];for(let i=0;i<23;i++){const e=document.createElement('span');e.className='particle';e.textContent=icons[i%icons.length];e.style.left=Math.random()*100+'%';e.style.fontSize=(13+Math.random()*17)+'px';e.style.animationDuration=(12+Math.random()*15)+'s';e.style.animationDelay=(-Math.random()*25)+'s';e.style.setProperty('--drift',((Math.random()-.5)*120)+'px');layer.appendChild(e)}
+go(0);
+</script>
+</body></html>
