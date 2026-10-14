@@ -42,8 +42,8 @@ h1{font-size:clamp(43px,11vw,76px)}h2{font-size:clamp(34px,8.5vw,55px)}
 .feedback{min-height:30px;margin:12px auto 0;color:#ffe0f2;font:17px/1.4 Georgia,serif}
 .photoFrame{position:relative;width:min(250px,68vw);height:min(250px,30vh);margin:12px auto 18px;border-radius:23px;overflow:hidden;border:1px solid #ffffff45;box-shadow:0 12px 35px #0007,0 0 25px #ff84d22b;background:linear-gradient(135deg,#3c214b,#191024);display:grid;place-items:center}
 .photoFrame img{width:100%;height:100%;object-fit:cover;display:block}
-.finalPhotoFrame{width:min(300px,76vw);height:auto!important;min-height:0;max-height:34vh;overflow:hidden;margin:14px auto 8px;display:flex;align-items:center;justify-content:center}
-.finalPhotoFrame img{width:100%;height:auto;max-height:34vh;object-fit:contain!important;object-position:center;display:block}
+.finalPhotoFrame{width:min(320px,78vw);height:auto!important;max-height:34vh;overflow:hidden;margin:12px auto 14px;display:flex;align-items:center;justify-content:center}
+.finalPhotoFrame img{width:100%;height:auto;max-height:34vh;object-fit:contain!important;display:block}
 #puzzleGrid{width:min(330px,78vw);aspect-ratio:3/2;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:5px;margin:14px auto;border-radius:15px;overflow:hidden;touch-action:pan-y}
 .piece{border:1px solid #ffffff75;border-radius:8px;background-repeat:no-repeat;background-size:300% 200%;box-shadow:0 4px 12px #0005;cursor:grab;min-width:0;min-height:0;touch-action:pan-y;user-select:none}
 .piece:active{cursor:grabbing}.piece.selected{outline:3px solid #ffb8e2;outline-offset:-3px;filter:brightness(1.15)}
@@ -92,11 +92,11 @@ h1{font-size:clamp(43px,11vw,76px)}h2{font-size:clamp(34px,8.5vw,55px)}
 <button class="opt" onclick="choose('future',3,this)"><span class="emoji">🌅</span>Growing old together</button>
 </div><div class="feedback" id="futureFeedback">What should our forever look like?</div></div></section>
 
-<section class="scene"><div class="panel"><span class="heroHeart" style="font-size:66px">🔐</span><h2>Only you know<br>the key.</h2><p class="copy">Enter our secret word to open the photo vault.</p><input id="keyInput" autocomplete="off" autocapitalize="none" placeholder="Type the secret word"><div class="keypad"><button class="btn primary" onclick="unlock()">Unlock the vault</button></div><div class="feedback" id="keyFeedback"></div></div></section>
+<section class="scene"><div class="panel"><span class="heroHeart" style="font-size:66px">🔐</span><h2>Only you know<br>the key.</h2><p class="copy">Enter our secret word to unlock the final puzzle.</p><input id="keyInput" autocomplete="off" autocapitalize="none" placeholder="Type the secret word"><div class="keypad"><button class="btn primary" onclick="unlock()">Unlock</button></div><div class="feedback" id="keyFeedback"></div></div></section>
 
-<section class="scene"><div class="panel"><h2>Put us back together. 🧩</h2><p class="copy">Drag the six pieces into the right places to reveal your picture. 💗</p><div id="puzzleGrid" aria-label="Six-piece photo puzzle"></div><div class="feedback" id="puzzleFeedback">Drag pieces to swap them, or tap two pieces on your phone.</div><p class="mini">A little puzzle, just for you. ❤️</p></div></section>
+<section class="scene"><div class="panel"><h2>Put us back together. 🧩</h2><p class="copy">Drag the six pieces into the right places to reveal your picture. 💗</p><div id="puzzleGrid" aria-label="Six-piece photo puzzle"></div><div class="feedback" id="puzzleFeedback">Drag pieces to swap them. On a phone, tap two pieces to swap them.</div></div></section>
 
-<section class="scene"><div class="panel"><span class="heroHeart">💓</span><h2>One last question.</h2><p class="copy" id="endingCopy">Lilly, when I picture my future, I picture you in it.</p><p class="muted">Tap the heart three times to open your final surprise.</p><button class="heartTap" onclick="tapFinalHeart()" aria-label="Tap heart">♥</button><div class="feedback" id="heartFeedback">0 / 3</div><div id="finalReveal" style="display:none"><p class="copy" style="font-family:Georgia,serif;font-size:20px;color:#ffe0f2">I want the ordinary days, the big dreams, the home, the laughter—and one day, to call you my wife. 💍</p><p class="copy" style="font-weight:800">i love u more than i can say u💘love is blind😁</p><div class="photoFrame finalPhotoFrame"><img src="photos/lilly-2.jpg" alt="Lilly" onerror="this.style.display='none'"></div><p class="muted">Forever your Bena ❤️</p></div></div></section>
+<section class="scene"><div class="panel"><span class="heroHeart">💓</span><h2>One last question.</h2><p class="copy" id="endingCopy">Lilly, when I picture my future, I picture you in it.</p><p class="muted">Tap the heart three times to open your final surprise.</p><button class="heartTap" onclick="tapFinalHeart()" aria-label="Tap heart">♥</button><div class="feedback" id="heartFeedback">0 / 3</div><div id="finalReveal" style="display:none"><p class="copy" style="font-family:Georgia,serif;font-size:20px;color:#ffe0f2">I want the ordinary days, the big dreams, the home, the laughter—and one day, to call you my wife. 💍</p><p class="copy" style="font-weight:800">i love u more than i can say u💘love is blind😁</p><div class="photoFrame finalPhotoFrame"><img src="lilly-2.jpg" alt="Lilly" onerror="this.style.display='none'"></div><p class="muted">Forever your Bena ❤️</p></div></div></section>
 </main>
 <footer id="bottom"><button class="nav" id="backBtn" onclick="go(page-1)">← Back</button><span class="count" id="count">01 / 08</span><button class="nav" id="nextBtn" onclick="go(page+1)">Continue →</button></footer>
 <div id="toast"></div>
@@ -104,18 +104,18 @@ h1{font-size:clamp(43px,11vw,76px)}h2{font-size:clamp(34px,8.5vw,55px)}
 /* Personalize this code if you want a private word only the two of you know. */
 const SECRET_CODE = "lilly";
 const scenes=[...document.querySelectorAll(".scene")];let page=0;
-const state={memory:null,love:null,future:null,unlocked:false,puzzleSolved:false,photoIndex:0,finalTaps:0,birthday:false};
+const state={memory:null,love:null,future:null,unlocked:false,photoIndex:0,finalTaps:0,birthday:false};
 const photos=[
- {src:"photos/lilly-1.jpg",caption:"A face I could never get tired of seeing. ❤️"},
- {src:"photos/lilly-2.jpg",caption:"One more picture, one more reason to smile. 🥹"},
- {src:"photos/lilly-3.jpg",caption:"A memory that belongs to us. 💗"},
- {src:"photos/lilly-4.jpg",caption:"My favorite kind of moment: you and me. ✨"},
- {src:"photos/lilly-5.jpg",caption:"And I would choose you again. 💍"},
- {src:"photos/lilly-6.jpg",caption:"Our story is still being written. 💞"},
- {src:"photos/lilly-7.jpg",caption:"The best chapters are still ahead. ❤️"},
- {src:"photos/lilly-8.jpg",caption:"One more memory for our forever. 💖"}
+ {src:"lilly-1.jpg",caption:"A face I could never get tired of seeing. ❤️"},
+ {src:"lilly-2.jpg",caption:"One more picture, one more reason to smile. 🥹"},
+ {src:"lilly-3.jpg",caption:"A memory that belongs to us. 💗"},
+ {src:"lilly-4.jpg",caption:"My favorite kind of moment: you and me. ✨"},
+ {src:"lilly-5.jpg",caption:"And I would choose you again. 💍"},
+ {src:"lilly-6.jpg",caption:"Our story is still being written. 💞"},
+ {src:"lilly-7.jpg",caption:"The best chapters are still ahead. ❤️"},
+ {src:"lilly-8.jpg",caption:"One more memory for our forever. 💖"}
 ];
-function go(i){if(i<0||i>=scenes.length)return;if(i===6&&!state.unlocked){toast("Enter the secret word first 💗");return}if(i===7&&!state.puzzleSolved){toast("Finish the picture puzzle first 🧩");return}scenes[page].classList.remove("active");page=i;scenes[page].classList.add("active");document.getElementById("count").textContent=String(page+1).padStart(2,"0")+" / "+String(scenes.length).padStart(2,"0");document.getElementById("progress").style.width=((page+1)/scenes.length*100)+"%";document.getElementById("backBtn").disabled=page===0;document.getElementById("nextBtn").disabled=page===scenes.length-1;document.getElementById("nextBtn").textContent=page===scenes.length-1?"The end ♥":"Continue →";if(page===7)refreshEnding()}
+function go(i){if(i<0||i>=scenes.length)return;scenes[page].classList.remove("active");page=i;scenes[page].classList.add("active");document.getElementById("count").textContent=String(page+1).padStart(2,"0")+" / "+String(scenes.length).padStart(2,"0");document.getElementById("progress").style.width=((page+1)/scenes.length*100)+"%";document.getElementById("backBtn").disabled=page===0;document.getElementById("nextBtn").disabled=page===scenes.length-1;document.getElementById("nextBtn").textContent=page===scenes.length-1?"The end ♥":"Continue →";if(page===7)refreshEnding()}
 document.addEventListener("keydown",e=>{if(e.key==="ArrowRight"&&page<scenes.length-1)go(page+1);if(e.key==="ArrowLeft"&&page>0)go(page-1);if(e.key==="Enter"&&page===5)unlock()});
 function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2200)}
 const music=document.getElementById("music");let musicOn=false;
@@ -128,16 +128,33 @@ const responses={
  future:[ "A home full of peace, laughter, and us. 🏡","New places, new stories—with you beside me. ✈️","That’s the dream I want to work toward: you as my wife. 💍","Still holding your hand when we’re old and gray. 🌅"]
 };
 function choose(kind,index,button){if(state[kind]!==null){toast("Choice already saved 💗");return}state[kind]=index;const group=button.parentElement;[...group.querySelectorAll(".opt")].forEach((b,i)=>{b.disabled=true;b.classList.toggle("chosen",i===index);b.classList.add("locked")});const target=document.getElementById(kind+"Feedback");target.textContent=responses[kind][index];toast("Choice saved ✨");}
-function unlock(){const input=document.getElementById("keyInput");if(state.unlocked){go(6);return}if(input.value.trim().toLowerCase()===SECRET_CODE.toLowerCase()){state.unlocked=true;document.getElementById("keyFeedback").textContent="You found it. 💗";input.disabled=true;document.querySelector("#keyInput + .keypad button").textContent="Open the puzzle →";setTimeout(()=>go(6),650)}else{document.getElementById("keyFeedback").textContent="Try again, pretty girl. 💭";input.value="";input.focus()}}
+function unlock(){const input=document.getElementById("keyInput");if(state.unlocked){go(6);return}if(input.value.trim().toLowerCase()===SECRET_CODE.toLowerCase()){state.unlocked=true;document.getElementById("keyFeedback").textContent="You found it. 💗";input.disabled=true;document.querySelector("#keyInput + .keypad button").textContent="Open the puzzle →";setTimeout(()=>go(6),500)}else{document.getElementById("keyFeedback").textContent="Try again, pretty girl. 💭";input.value="";input.focus()}}
 const puzzleOrder=[2,5,1,4,0,3];let puzzlePieces=[...puzzleOrder],selectedPiece=null;
-function drawPuzzle(){const grid=document.getElementById("puzzleGrid");grid.innerHTML="";puzzlePieces.forEach((pieceId,slot)=>{const piece=document.createElement("div");piece.className="piece";piece.dataset.slot=slot;piece.dataset.piece=pieceId;piece.style.backgroundImage="url('photos/lilly-9.jpg')";piece.style.backgroundPosition=((pieceId%3)*50)+"% "+(Math.floor(pieceId/3)*100)+"%";piece.setAttribute("role","button");piece.setAttribute("aria-label","Puzzle piece "+(slot+1));piece.draggable=true;piece.addEventListener("dragstart",e=>{e.dataTransfer.setData("text/plain",String(slot));e.dataTransfer.effectAllowed="move";selectedPiece=slot});piece.addEventListener("dragover",e=>{e.preventDefault();e.dataTransfer.dropEffect="move"});piece.addEventListener("drop",e=>{e.preventDefault();const from=Number(e.dataTransfer.getData("text/plain"));swapPieces(from,slot)});piece.addEventListener("click",()=>{if(selectedPiece===null){selectedPiece=slot;piece.classList.add("selected")}else{swapPieces(selectedPiece,slot)}});piece.addEventListener("pointerup",()=>{if(selectedPiece!==null&&selectedPiece!==slot)swapPieces(selectedPiece,slot)});grid.appendChild(piece)});}
-function swapPieces(a,b){if(a===b||a<0||b<0)return;[puzzlePieces[a],puzzlePieces[b]]=[puzzlePieces[b],puzzlePieces[a]];selectedPiece=null;document.getElementById("puzzleFeedback").textContent="Keep going—you’re close. 💗";drawPuzzle();checkPuzzle()}
-function checkPuzzle(){if(puzzlePieces.every((v,i)=>v===i)){state.puzzleSolved=true;document.getElementById("puzzleGrid").classList.add("solved");document.getElementById("puzzleFeedback").textContent="You did it! ❤️";toast("Picture completed 💖");setTimeout(()=>go(7),850)}}
-function showPuzzleImageError(){document.getElementById("puzzleFeedback").textContent="Add your photo as photos/lilly-9.jpg in GitHub to show the puzzle."}
-const puzzleImage=new Image();puzzleImage.onerror=showPuzzleImageError;puzzleImage.src="photos/lilly-9.jpg";
+function drawPuzzle(){
+ const grid=document.getElementById("puzzleGrid");if(!grid)return;grid.innerHTML="";
+ puzzlePieces.forEach((pieceId,slot)=>{
+  const piece=document.createElement("div");piece.className="piece";piece.dataset.slot=slot;piece.dataset.piece=pieceId;
+  piece.style.backgroundImage='url("lilly-9.jpg")';
+  piece.style.backgroundPosition=((pieceId%3)*50)+"% "+(Math.floor(pieceId/3)*100)+"%";
+  piece.setAttribute("role","button");piece.setAttribute("aria-label","Puzzle piece "+(slot+1));piece.draggable=true;
+  piece.addEventListener("dragstart",e=>{e.dataTransfer.setData("text/plain",String(slot));e.dataTransfer.effectAllowed="move";selectedPiece=slot});
+  piece.addEventListener("dragover",e=>{e.preventDefault();e.dataTransfer.dropEffect="move"});
+  piece.addEventListener("drop",e=>{e.preventDefault();const from=Number(e.dataTransfer.getData("text/plain"));swapPieces(from,slot)});
+  piece.addEventListener("click",()=>{if(selectedPiece===null){selectedPiece=slot;drawPuzzleSelection()}else{swapPieces(selectedPiece,slot)}});
+  grid.appendChild(piece);
+ });
+}
+function drawPuzzleSelection(){document.querySelectorAll("#puzzleGrid .piece").forEach((el,i)=>el.classList.toggle("selected",i===selectedPiece));}
+function swapPieces(a,b){if(a===b||a<0||b<0)return;[puzzlePieces[a],puzzlePieces[b]]=[puzzlePieces[b],puzzlePieces[a]];selectedPiece=null;drawPuzzle();checkPuzzle();}
+function checkPuzzle(){if(puzzlePieces.every((v,i)=>v===i)){document.getElementById("puzzleGrid").classList.add("solved");document.getElementById("puzzleFeedback").textContent="You did it! ❤️";toast("Picture completed 💖");setTimeout(()=>go(7),900)}else{document.getElementById("puzzleFeedback").textContent="Keep going—you’re close. 💗"}}
+const puzzleImage=new Image();
+puzzleImage.onload=()=>{drawPuzzle()};
+puzzleImage.onerror=()=>{const f=document.getElementById("puzzleFeedback");if(f)f.textContent="I can’t find lilly-9.jpg. Upload it beside index.html in your GitHub repository, with exactly this filename."};
+puzzleImage.src="lilly-9.jpg";
+
 function refreshEnding(){const choices=[];if(state.future!==null)choices.push(["our home","our adventures","being husband and wife","growing old together"][state.future]);document.getElementById("endingCopy").textContent=choices.length?"I remember what you chose: "+choices[0]+". I hope we get to build that future together. ❤️":"When I picture my future, I picture you in it. ❤️"}
 function tapFinalHeart(){state.finalTaps++;document.getElementById("heartFeedback").textContent=state.finalTaps+" / 3";const h=document.querySelector(".heartTap");h.style.transform="scale(1.18)";setTimeout(()=>h.style.transform="",160);if(state.finalTaps>=3){document.getElementById("finalReveal").style.display="block";document.getElementById("heartFeedback").textContent="Unlocked. My heart is yours. 💘";h.textContent="💖";confetti()}}
 const starLayer=document.getElementById("stars");for(let i=0;i<28;i++){const s=document.createElement("span");s.className="star";s.textContent=["✦","♡","✧","·"][i%4];s.style.left=Math.random()*100+"%";s.style.fontSize=(11+Math.random()*17)+"px";s.style.animationDuration=(12+Math.random()*18)+"s";s.style.animationDelay=(-Math.random()*25)+"s";starLayer.appendChild(s)}
-drawPuzzle();go(0);
+go(0);
 </script>
 </body></html>
